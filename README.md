@@ -2,9 +2,9 @@
 ## Infinite Scroll 是利用unsplash api loading 指定collections的圖片，並使其在網頁上進行無限的loading
 
 # 使用的工具
->unsplash API : https://unsplash.com/developers
->loading.io : https://loading.io/
->HeroPattern: https://heropatterns.com/
+- unsplash API : https://unsplash.com/developers
+- loading.io : https://loading.io/
+- HeroPattern: https://heropatterns.com/
 
 # 工作方法
 **1.製作loading spiner**
