@@ -43,20 +43,22 @@ h1 {
 
 
 .img-container {
-    margin: 10px 20%;
+    margin: 10px 5%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .img-card {
-    width: 33%;
+    width: 33.3%;
 }
 
+/* crop img fit to center */
 .img-card img {
+    height: 200px;
+    object-fit: cover;
     width: 98%;
-    margin: 5px;
+    margin: 1px 5px;
+    object-position: 50% 50%;
 }
 
 
@@ -67,6 +69,13 @@ h1 {
 
     .img-card {
         width: 100%;
+    }
+    .img-card img {
+        height: auto;
+        object-fit: unset;
+        width: 100%;
+        margin: 1px 5px;
+        object-position: unset
     }
 }
 
