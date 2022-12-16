@@ -1,12 +1,12 @@
 # InfiniteScroll
-##Infinite Scroll 是利用unsplash api loading 指定collections的圖片，並使其在網頁上進行無限的loading
+## Infinite Scroll 是利用unsplash api loading 指定collections的圖片，並使其在網頁上進行無限的loading
 
-#使用的工具
+# 使用的工具
 >unsplash API : https://unsplash.com/developers
 >loading.io : https://loading.io/
 >HeroPattern: https://heropatterns.com/
 
-#工作方法
+# 工作方法
 **1.製作loading spiner**
 - 從[loading.io](https://loading.io/)中製作客製化的loading spin, 並儲存為animated - svg file
 - 在index.html中導入loading spiner svg
