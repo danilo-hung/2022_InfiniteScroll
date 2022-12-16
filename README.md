@@ -1,5 +1,5 @@
 # InfiniteScroll
-## Infinite Scroll 是利用unsplash api loading 指定collections的圖片，並使其在網頁上進行無限的loading
+## Infinite Scroll 是利用unsplash api loading 隨機生成的圖片，並使其在網頁上進行無限的loading
 
 # 使用的工具
 - unsplash API : https://unsplash.com/developers
