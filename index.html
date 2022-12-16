@@ -9,14 +9,28 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="manifest" href="./favicon_io/site.webmanifest">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
     <link rel="stylesheet" href="style.css">
     <title>infinite Scroll</title>
 </head>
 
 <body>
+    <div class="copyRight">
+        <i class="fa-regular fa-registered"></i>
+        <span>&nbsp Danilo 2022</span>
+    </div>
     <!-- Title -->
     <h1>Unsplash API - Infinite Scroll</h1>
+    <!-- get api key -->
+    <div id="api-container">
+        <form class="api-text" id="api-form">
+            <label for="api">get an unSplash's API key to start</label>
+            <input type="text" name="api" id="api">
+            <button>go!</button>
+        </form>
+        <p class="api-text">if you don't know how to get an API</p>
+        <a class="api-text" href="https://unsplash.com/developers">check this</a>
+    </div>
     <!-- loader -->
     <div class="loader" id="loader" hidden>
         <img src="loader.svg" alt="Loading">
@@ -24,10 +38,7 @@
     <!-- img container -->
 
     <div class="img-container" id="img-container">
-            <a class="img-card" href="#">
-                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                    alt="" srcset="">
-            </a>
+
     </div>
     <!-- script -->
     <script src="script.js"></script>

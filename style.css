@@ -13,6 +13,13 @@ body {
 
 }
 
+.copyRight {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
     margin-top: 25px;
@@ -39,22 +46,69 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+/* form */
+
+.api-text{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    letter-spacing: 2px;
+
+}
+label, 
+input,
+button{
+    margin-top: 10px;
+    margin-right: 1rem
+}
+
+input{
+    cursor: pointer;
+    padding: 0 1.8rem;
+    height: 1.5rem;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+    padding: 0 1.8rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background: rgb(43, 63, 60);
+    box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+    transition: color 250ms, filter 250ms;
+}
+button:hover {
+    filter: brightness(110%);
+    color: rgb(255, 196, 2);
+}
+
+button:active {
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
 /* img */
-
-
 .img-container {
     margin: 10px 5%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .img-card {
+    max-width: 300px;
     width: 33.3%;
 }
 
 /* crop img fit to center */
 .img-card img {
-    height: 200px;
+    border-radius: 15px;
+    height: 300px;
     object-fit: cover;
     width: 98%;
     margin: 1px 5px;
@@ -68,7 +122,7 @@ h1 {
     }
 
     .img-card {
-        width: 100%;
+        min-width: 100%;
     }
     .img-card img {
         height: auto;
@@ -83,5 +137,27 @@ h1 {
 @media screen and (max-width:415px) {
     h1 {
         font-size:14px
+    }
+    .api-text{
+        font-size: 10px;
+    }
+    input{
+        padding: 0 1rem;
+        height: 1rem;
+        border-radius: 8px;
+        margin-right: 1rem;
+        margin-top:1rem;
+    }
+    button {
+        padding: 0 1rem;
+        height: 1.3rem;
+        border-radius: 8px;
+        box-shadow: 0 0.2rem rgba(121, 121, 121, 0.65);
+        transition: color 250ms, filter 250ms;
+        margin-top:1rem;
+    }
+    .copyRight {
+        font-size: 8px;
+
     }
 }
