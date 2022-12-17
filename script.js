@@ -13,7 +13,6 @@ const count = 30;
 let unsplashUrl = ``
 let apiKey = ""
 
-
 //create setAttribute helper function
 const setAttributes = (element, featureObjects) => {
     for (let i in featureObjects) {
@@ -26,12 +25,12 @@ const checkLoaded = () => {
     load++
     if (load == totalLoaded) {
         loaded = true;
-        load = 0
     }
 }
 
 //create link and photo, add to DOM
 const displayPhoto = () => {
+    load = 0
     totalLoaded = photoArray.length;
     photoArray.forEach((photo => {
         const description = photo.description;
@@ -66,10 +65,9 @@ const getPhoto = async () => {
     loader.removeAttribute("hidden")
     setTimeout(async () => {
         try {
-            photoArray = []
             const res = await fetch(unsplashUrl);
             let datas = await res.json();
-            photoArray.push(...datas)
+            photoArray = datas
             // console.log(photoArray);
             displayPhoto();
             loader.setAttribute("hidden", "")
@@ -84,11 +82,11 @@ const getPhoto = async () => {
 }
 
 // get api key first and then onload
-apiForm.addEventListener('submit', (e)=>{
+apiForm.addEventListener('submit', (e) => {
     e.preventDefault();
     apiKey = api.value;
-    unsplashUrl = `https://api.unsplash.com/photos/?client_id=${apiKey}&per_page=${count}`
-    apiContainer.setAttribute("hidden","")
+    unsplashUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&collections=778914&count=${count}`
+    apiContainer.setAttribute("hidden", "")
     //On load
     getPhoto()
 })
